@@ -21,36 +21,71 @@ body {
 	color: var(--primary-text-color);
 }
 
+.wrapper {
+	margin: 0 auto;
+	/* width: 100%; */
+	max-width: 1200px;
+}
 /* //NAVIGATION/ */
 
 nav {
-	width: 100%;
-	height: 3.75rem;
 	padding: 1.5rem 1rem 0;
 }
 
 .nav-mobile {
 	display: flex;
 	justify-content: space-between;
+	gap: 4rem;
 	align-items: center;
-	height: 100%;
-	width: 100%;
 }
 
 .logo {
-	width: 3.625rem;
-	height: 2.25rem;
 	cursor: pointer;
 }
 
 .hamburger {
-	height: 1.23rem;
-	width: 1.44rem;
 	cursor: pointer;
 }
 
 .nav-desktop {
 	display: none;
+	gap: 4rem;
+	align-items: center;
+}
+
+.nav-desktop-links {
+	flex: 1;
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+}
+
+.nav-desktop-links a {
+	text-decoration: none;
+	color: var(--primary-text-color);
+	line-height: 150%;
+}
+
+.nav-desktop-btns {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	white-space: nowrap;
+}
+
+.nav-desktop-btns p {
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 150%;
+}
+
+.nav-desktop-btn {
+	padding: 0.625rem 1.25rem;
+	border-radius: 0.5rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 150%;
+	cursor: pointer;
 }
 
 /* //HERO/ */
@@ -60,7 +95,7 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 2rem 1rem;
+	padding: 2rem 1rem;
 	gap: 1rem;
 }
 
@@ -94,7 +129,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	padding: 0.625rem 1.25rem;
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	font-weight: 500;
 	line-height: 1.5rem;
 	cursor: pointer;
@@ -123,8 +158,14 @@ nav {
 }
 
 .hero-img {
+	position: relative;
 	width: 100%;
-	height: 100%;
+	height: 27.5vh;
+	background-image: linear-gradient(rgba(14, 159, 110, 0.2), rgba(14, 159, 110, 0.2)), url(./img/image-3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 8px;
+	color: rgb(14, 159, 110);
 }
 
 /* SOCIAL PROOF */
@@ -588,4 +629,18 @@ footer {
 .social-links {
 	display: flex;
 	gap: 1.25rem;
+}
+
+/* 
+///////// MEDIA QUERIES ////////// */
+
+@media (min-width: 1024px) {
+
+	.nav-mobile {
+		display: none;
+	}
+
+	.nav-desktop {
+		display: flex;
+	}
 }
