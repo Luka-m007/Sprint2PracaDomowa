@@ -173,7 +173,6 @@ header {
 	background-image: linear-gradient(rgba(14, 159, 110, 0.2), rgba(14, 159, 110, 0.2)), url(./img/image-3.jpg);
 	border-radius: var(--border-radius);
 	color: rgb(14, 159, 110);
-	flex: 1;
 }
 .hero-img img {
 	position: absolute;
@@ -607,6 +606,10 @@ footer {
 	}
 	.head-text {
 		font-size: 1.125rem;
+	}
+
+	.hero-img {
+		flex: 1;
 	}
 	.hero-span {
 		display: block;
